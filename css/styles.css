@@ -1,0 +1,568 @@
+/* --- Updated CSS (styles.css) - Includes Booking Page Styles --- */
+
+/* CSS Reset (Basic - you can use a more comprehensive reset if needed) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Choose a more calming font if desired */
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Very light grey background */
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Global Styles --- */
+a {
+  color: #007bff; /* Primary link color - a calming blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #444; /* Dark grey for headings */
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: #555; /* Slightly lighter text for paragraphs */
+}
+
+ul,
+ol {
+  margin-bottom: 1.2rem;
+  padding-left: 20px;
+}
+
+/* --- Header and Navigation --- */
+header {
+  background-color: #fff; /* White header background */
+  padding: 20px 0;
+  border-bottom: 1px solid #eee; /* Very light border */
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* Space out logo and nav links */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Horizontal navigation */
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  display: block; /* Make links easier to click */
+  padding: 10px 15px;
+  color: #555;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  /* Add 'active' class in HTML for current page */
+  background-color: #e0f7fa; /* Very light cyan on hover/active */
+  color: #00838f; /* Teal color on hover/active */
+}
+
+/* --- Main Content --- */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for sections */
+}
+
+section:last-of-type {
+  margin-bottom: 0; /* No margin on the last section */
+}
+
+section h1 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+section h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+section p {
+  color: #666;
+}
+
+/* --- Hero Section (Homepage) --- */
+#hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f0f8ff; /* Very light blue for hero background */
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: none; /* Remove border from hero heading */
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* --- Buttons --- */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #00bcd4; /* Cyan button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.button:hover {
+  background-color: #0097a7; /* Darker cyan on hover */
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+.button:active {
+  transform: scale(0.98); /* Slight scale down on active/click */
+}
+
+.learn-more-button,
+.start-story-button,
+#contact-form button[type="submit"],
+#booking-form button[type="submit"] {
+  /* Apply button styles to specific buttons, including booking submit */
+  /* Inherits styles from .button, add specific styles if needed */
+}
+
+/* --- Virtual Animals Section --- */
+#animal-profiles {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+}
+
+.animal-profile {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* Clip image to border-radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.animal-profile:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.animal-profile img {
+  display: block;
+  width: 100%;
+  height: 200px; /* Fixed height for images - adjust as needed */
+  object-fit: cover; /* Cover container, crop if needed */
+}
+
+.animal-profile h2,
+.animal-profile p {
+  padding: 15px 20px;
+}
+
+.animal-profile h2 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.animal-profile p {
+  color: #666;
+}
+
+.animal-profile .learn-more-button {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  margin-bottom: 0; /* Remove default button margin */
+}
+
+/* --- Animal Modal --- */
+.modal {
+  display: none; /* Hidden by default - shown by JS */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 8px;
+  position: relative; /* For close button positioning */
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-animal-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Virtual Activities Section --- */
+#virtual-petting-zone {
+  text-align: center;
+  margin-bottom: 40px; /* Add margin to separate from other sections */
+}
+
+.petting-area {
+  position: relative; /* For absolute positioning of map areas */
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#virtual-dog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.pet-area {
+  cursor: pointer;
+  outline: none;
+}
+
+.meditation-list,
+.story-list,
+.sounds-images-player {
+  margin-top: 20px;
+}
+
+.meditation-item,
+.story-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light grey for activity items */
+  border-radius: 8px;
+}
+
+.meditation-item h3,
+.story-item h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.meditation-item audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.story-item .start-story-button {
+  margin-top: 15px;
+}
+
+.image-carousel {
+  display: flex;
+  overflow-x: auto; /* Horizontal scroll for images on smaller screens */
+  gap: 15px;
+  padding-bottom: 15px; /* Space for scrollbar */
+}
+
+.image-carousel img {
+  width: 250px; /* Fixed width for carousel images - adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.sound-playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sound-playlist li {
+  margin-bottom: 10px;
+}
+
+.sound-playlist .play-sound-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #aed581; /* Light green for sound buttons */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.sound-playlist .play-sound-button:hover {
+  background-color: #8bc34a; /* Darker green on hover */
+}
+
+/* --- Contact Form and Booking Form Styles (Shared) --- */
+#contact-form,
+#booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"], /* Added tel input style */
+.form-group textarea,
+.form-group select {
+  /* Added select style */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit; /* Inherit font from body */
+  appearance: none; /* Reset default select appearance for consistent styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+/* Style for radio button options in booking form */
+.date-time-options {
+  margin-top: 10px;
+}
+
+.date-time-options .option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.date-time-options .option input[type="radio"] {
+  width: auto; /* Reset width */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.date-time-options .option label {
+  margin-bottom: 0; /* Reset label margin */
+  cursor: pointer;
+  font-weight: normal; /* Reset label font-weight */
+}
+
+#form-message,
+#booking-message {
+  /* Style for both contact and booking confirmation messages */
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda; /* Light green for success message */
+  color: #155724; /* Darker green text for success message */
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  display: none; /* Hidden by default - shown by JS */
+}
+
+#form-message.show,
+#booking-message.show {
+  /* Class to show the message with JS */
+  display: block;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  color: #777;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+}
+
+footer nav ul {
+  justify-content: center; /* Center footer navigation */
+}
+
+footer nav ul li {
+  margin: 0 15px;
+}
+
+footer nav ul li a {
+  color: #777;
+  padding: 8px 12px;
+}
+
+footer nav ul li a:hover {
+  color: #555;
+  background-color: #f0f0f0;
+}
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* Mobile Styles (default styles are often for mobile-first) */
+
+/* Tablet Styles (e.g., screens larger than 768px) */
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 0 30px;
+  }
+
+  nav ul li {
+    margin-left: 35px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  #hero {
+    padding: 100px 30px;
+  }
+
+  #hero h1 {
+    font-size: 3rem;
+  }
+
+  #animal-profiles {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* Wider columns on tablet */
+    gap: 40px;
+  }
+
+  .image-carousel img {
+    width: 300px; /* Wider carousel images on tablet */
+  }
+}
+
+/* Desktop Styles (e.g., screens larger than 1024px) */
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 0 50px;
+  }
+
+  nav ul li {
+    margin-left: 45px;
+  }
+
+  main {
+    padding: 50px;
+  }
+
+  section {
+    padding: 40px;
+  }
+
+  #hero {
+    padding: 120px 50px;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  #animal-profiles {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(350px, 1fr)
+    ); /* Wider columns on desktop */
+    gap: 50px;
+  }
+
+  .image-carousel img {
+    width: 350px; /* Wider carousel images on desktop */
+  }
+}
