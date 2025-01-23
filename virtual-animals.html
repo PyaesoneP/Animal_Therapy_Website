@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Our Virtual Animals - Animal-Inspired Support</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-bdd.html">What is BDD?</a></li>
+          <li><a href="animal-therapy.html">Animal Therapy</a></li>
+          <li><a href="virtual-animals.html">Virtual Animals</a></li>
+          <li><a href="virtual-activities.html">Virtual Activities</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Meet Our Virtual Animal Companions</h1>
+        <p>
+          Discover our virtual animal companions, each chosen for their unique
+          qualities that can offer comfort and support. Click on an animal to
+          learn more about them.
+        </p>
+
+        <div id="animal-profiles">
+          <!-- Animal profiles will be dynamically added here by JavaScript -->
+          <article class="animal-profile" data-animal-id="buddy">
+            <img
+              src="assets/images/animals/placeholder-dog.jpg"
+              alt="Buddy the Dog"
+            />
+            <h2>Buddy</h2>
+            <p>
+              A gentle Golden Retriever known for his calm and reassuring
+              presence.
+            </p>
+            <button class="learn-more-button">Learn More</button>
+          </article>
+
+          <article class="animal-profile" data-animal-id="luna">
+            <img
+              src="assets/images/animals/placeholder-cat.jpg"
+              alt="Luna the Cat"
+            />
+            <h2>Luna</h2>
+            <p>
+              A serene and affectionate cat, offering quiet companionship and
+              comfort.
+            </p>
+            <button class="learn-more-button">Learn More</button>
+          </article>
+
+          <!-- Add more animal profiles here -->
+        </div>
+
+        <div id="animal-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2 id="modal-animal-name"></h2>
+            <img id="modal-animal-image" src="" alt="" />
+            <p id="modal-animal-description"></p>
+            <!-- More detailed information can be added here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2023 Your Team Name. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
