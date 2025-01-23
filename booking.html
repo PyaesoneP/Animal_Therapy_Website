@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Session - Animal-Inspired Support</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-is-bdd.html">What is BDD?</a></li>
+          <li><a href="animal-therapy.html">Animal Therapy</a></li>
+          <li><a href="virtual-animals.html">Virtual Animals</a></li>
+          <li><a href="virtual-activities.html">Virtual Activities</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="booking.html" class="active">Book a Session</a>
+            <!-- Active class for current page -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="booking-section">
+        <h1>Book Your Dog Therapy Session</h1>
+        <p>
+          Ready to experience the comfort and support of a real dog therapy
+          session? Please fill out the form below to request a booking. We will
+          get back to you to confirm availability and session details.
+        </p>
+
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="location">Choose a Location:</label>
+            <select id="location" name="location" required>
+              <option value="">-- Select Location --</option>
+              <option value="downtown">Therapy Center - Downtown</option>
+              <option value="park">Park Setting - Outdoors</option>
+              <option value="other">Other (Please Specify in Message)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Select Date and Time Preference:</label>
+            <div class="date-time-options">
+              <div class="option">
+                <input
+                  type="radio"
+                  id="date-time-option-1"
+                  name="date-time"
+                  value="option1"
+                  required
+                />
+                <label for="date-time-option-1"
+                  >Mondays 2:00 PM - 3:00 PM</label
+                >
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  id="date-time-option-2"
+                  name="date-time"
+                  value="option2"
+                  required
+                />
+                <label for="date-time-option-2"
+                  >Wednesdays 10:00 AM - 11:00 AM</label
+                >
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  id="date-time-option-3"
+                  name="date-time"
+                  value="option3"
+                  required
+                />
+                <label for="date-time-option-3"
+                  >Fridays 3:00 PM - 4:00 PM</label
+                >
+              </div>
+              <!-- Add more date/time options as needed -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dog-preference"
+              >Therapy Dog Preference (Optional):</label
+            >
+            <select id="dog-preference" name="dog-preference">
+              <option value="">-- No Preference --</option>
+              <option value="gentle">
+                Gentle Breed (e.g., Golden Retriever)
+              </option>
+              <option value="playful">Playful Breed (e.g., Labradoodle)</option>
+              <option value="calm">
+                Calm Breed (e.g., Cavalier King Charles Spaniel)
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Your Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Information or Requests:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="button">Submit Booking Request</button>
+        </form>
+
+        <div id="booking-message" class="hidden">
+          <p>
+            Thank you for your booking request! We will contact you shortly to
+            confirm your session details.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2023 Your Team Name. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
