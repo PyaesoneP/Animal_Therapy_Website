@@ -1,0 +1,876 @@
+/* style.css */
+
+/* General Styles */
+body {
+  /* Option 2: Simple CSS repeating pattern (more abstract, less resource intensive) - ADJUSTED for SUBTLETY */
+  background-image: repeating-radial-gradient(
+      circle at 20% 20%,
+      rgba(250, 234, 187, 0.3) 0%,
+      rgba(250, 234, 187, 0.3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    /* **Increased dot size to 2px** */
+      repeating-radial-gradient(
+        circle at 80% 80%,
+        rgba(168, 218, 220, 0.3) 0%,
+        rgba(168, 218, 220, 0.3) 3px,
+        transparent 3px,
+        transparent 6px
+      ); /* **Increased dot size to 3px** */
+  background-color: #f8f0e3; /* Base beige background */
+  font-family: "Poppins", sans-serif; /* Modern, friendly font */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #5c8a8a; /* Teal-ish link color */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3d6363; /* Darker teal on hover */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito", sans-serif; /* Cute, rounded font for headings */
+  color: #594a4e; /* Soft brown heading color */
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px; /* Rounded buttons */
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.primary-button {
+  background-color: #a8dadc; /* Light blue primary button */
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #7dbdc3; /* Darker blue on hover */
+}
+
+.secondary-button {
+  background-color: #fceabb; /* Light yellow secondary button */
+  color: #594a4e;
+}
+
+.secondary-button:hover {
+  background-color: #fad77b; /* Darker yellow on hover */
+}
+
+.content-section {
+  padding: 60px 20px; /* Slightly increased padding */
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* For divider positioning */
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-content > * {
+  /* Target direct children for responsive layout */
+  flex: 1;
+  min-width: 300px; /* Ensure content doesn't collapse too much */
+}
+
+.text-container {
+  text-align: left;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Rounded image corners */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Header & Navigation */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle header shadow */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Vertically align logo image and text */
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+  display: block; /* Ensure image behaves as block for alignment */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8em;
+  line-height: 1; /* Tighter line height for heading */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f0f0f0; /* Light gray hover for nav links */
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #f8f0e3 60%,
+    #fff 90%,
+    #fefefe
+  ); /* More varied gradient with warmer white at the end */
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* Rounded hero image */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
+}
+
+/* Hero Carousel Styles */
+.image-carousel {
+  position: relative; /* For positioning arrows */
+  max-width: 100%;
+  overflow: hidden; /* Hide overflowing slides */
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide {
+  display: none; /* Initially hide all slides */
+  animation: fade 1.5s ease-in-out; /* Fade in animation */
+}
+
+.carousel-slide img {
+  width: 100%; /* Make images fill carousel width */
+  height: auto;
+  display: block; /* Remove bottom spacing */
+}
+
+/* Fade animation for slides */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation arrows */
+.carousel-prev,
+.carousel-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Keep vertical centering */
+  transform: translateY(-50%); /* More robust vertical centering */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+}
+
+.carousel-prev {
+  left: 10px; /* Position on the left, adjust value as needed */
+  border-radius: 3px 0 0 3px;
+}
+
+.carousel-next {
+  right: 10px; /* Position on the right, adjust value as needed */
+  border-radius: 3px 0 0 3px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Resources Section */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.resource-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for resource items */
+}
+
+.resource-item i,
+.contact-item i {
+  color: #594a4e; /* Match heading color */
+  margin-bottom: 20px; /* Add back margin for spacing like images had */
+  display: block; /* Ensure proper spacing */
+}
+
+.resource-item h3 {
+  margin-bottom: 10px;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.resource-list li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ddd; /* Light dashed line to separate resources */
+}
+
+.resource-list li:last-child {
+  border-bottom: none; /* Remove border from last item */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.resource-link {
+  font-weight: bold;
+  display: block; /* Make link take full width for easier clicking */
+  margin-bottom: 5px;
+  color: #5c8a8a; /* Link color - consistent with other links */
+}
+
+.resource-link:hover {
+  color: #3d6363; /* Hover color */
+}
+
+.resource-description {
+  font-size: 0.95em;
+  color: #777; /* Slightly muted description text */
+  margin: 0;
+}
+
+.resource-item .button {
+  /* Style buttons within resource items */
+  margin-top: 20px; /* Add space above the button */
+}
+
+/* Booking Form */
+.booking-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); /* Shadow for booking form */
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.booking-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #594a4e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif; /* Match form input font */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #c3e6cb;
+}
+
+/* Forum Section */
+.forum {
+  background-color: #f0f8ff; /* Light blue forum background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for forum */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.forum h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.forum-post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.05); /* Very light shadow for forum posts */
+}
+
+.post-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.post-content {
+  margin: 0;
+}
+
+.forum-placeholder {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Forum Section - Interactive Form Styles */
+.new-post-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.06); /* Slightly stronger shadow than post */
+  margin-top: 25px; /* Space between posts and form */
+}
+
+.new-post-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.new-post-form .form-group {
+  margin-bottom: 20px;
+}
+
+.new-post-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif; /* Match form input font */
+  resize: vertical;
+}
+
+.new-post-form .button {
+  display: block; /* Make button full width */
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Contact Section */
+.contact-form-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.contact-form {
+  margin-bottom: 20px; /* Space between form and fallback info */
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #594a4e;
+}
+
+.contact-form .form-group input[type="text"],
+.contact-form .form-group input[type="email"],
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form .form-group textarea {
+  resize: vertical;
+}
+
+.contact-form .button {
+  margin-top: 10px;
+}
+
+.contact-info-fallback {
+  font-size: 0.9em;
+  color: #777;
+  line-height: 1.8;
+  text-align: center; /* Center the fallback contact info */
+  margin-top: 20px;
+}
+
+.contact-info-fallback i {
+  margin-right: 5px;
+  color: #a8dadc; /* Icon color */
+}
+
+.contact-info {
+  /* REMOVE THIS - No longer used, replaced by contact-form-section and contact-form-fallback */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive contact grid */
+  gap: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.contact-item {
+  /* REMOVE THIS - No longer used */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for contact items */
+}
+
+.contact-item img {
+  /* REMOVE THIS - No longer used */
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer a {
+  color: #555;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #333;
+}
+
+footer .footer-paw-icon {
+  color: #a8dadc; /* Light blue paw icon in footer */
+  font-size: 1em;
+  margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  nav ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .hero {
+    flex-direction: column-reverse; /* Stack hero content and image */
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .section-content {
+    flex-direction: column; /* Stack content sections on small screens */
+  }
+  .resources-grid,
+  .contact-info,
+  .team-grid,
+  .dog-grid,
+  .faq-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+/* Team Section Styles */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive team grid */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  justify-items: center; /* Center items in grid cells */
+}
+
+.team-member {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for team members */
+  max-width: 350px; /* Limit width of team member boxes */
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover; /* Ensure images fill circle properly */
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on images */
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+}
+
+.team-title {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.team-bio {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* FAQ Section Styles */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive FAQ grid */
+  gap: 25px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for FAQ items */
+  text-align: left; /* Align text to left within FAQ items */
+}
+
+.faq-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #5c8a8a; /* Use link color for FAQ titles */
+}
+
+.faq-item p {
+  margin: 0;
+  color: #555;
+}
+
+/* Testimonial Styles */
+.testimonial {
+  background-color: #fffaf0; /* Very light peach/ivory for testimonial background */
+  border-left: 5px solid #ffb6c1; /* Light pink border to highlight testimonial */
+  padding: 25px;
+  border-radius: 0 10px 10px 0; /* Rounded right corners */
+  margin: 25px auto; /* Add margin around testimonial */
+  font-style: italic;
+  color: #555;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.05); /* Very light shadow */
+  quotes: "\201C""\201D""\2018""\2019"; /* Proper quotation marks */
+}
+
+.testimonial::before {
+  content: open-quote;
+  font-size: 2em;
+  color: #ffb6c1; /* Light pink quote mark color */
+  margin-right: 5px;
+  vertical-align: -0.2em;
+}
+
+.testimonial::after {
+  content: close-quote;
+  font-size: 2em;
+  color: #ffb6c1; /* Light pink quote mark color */
+  margin-left: 5px;
+  vertical-align: -0.2em;
+}
+
+.testimonial cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  color: #777;
+  margin-top: 15px;
+}
+
+/* Special style for puppy quote - optional, just for fun */
+.testimonial.puppy-quote {
+  border-color: #fceabb; /* Yellow border for puppy quote */
+}
+
+.testimonial.puppy-quote::before,
+.testimonial.puppy-quote::after {
+  color: #fceabb; /* Yellow quote marks for puppy quote */
+}
+
+/* Therapy Dogs Section Styles */
+#therapy-dogs.content-section {
+  background-color: #f0f8ff; /* Very light blue background for therapy dogs section */
+}
+
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive dog grid */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  justify-items: center; /* Center items in grid cells */
+}
+
+.dog-member {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08); /* Light shadow for dog members */
+  max-width: 350px; /* Limit width of dog member boxes */
+}
+
+.dog-member img {
+  width: 180px; /* Slightly larger dog images */
+  height: 180px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover; /* Ensure images fill circle properly */
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on images */
+}
+
+.dog-member h3 {
+  margin-bottom: 5px;
+}
+
+.dog-breed {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.dog-bio {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Theme Enhancements */
+
+/* Paw Print Dividers (CSS Shape - simple example) */
+.content-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background-color: #fceabb; /* Yellow paw color */
+  clip-path: polygon(
+    0% 0%,
+    30% 0%,
+    40% 100%,
+    60% 100%,
+    70% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  ); /* Simple paw-like shape */
+  margin-top: 30px; /* Space above divider */
+  opacity: 0.7; /* Make it slightly transparent */
+}
+
+/* Remove divider from the last sections */
+#contact.content-section::after,
+#forum.content-section::after, /* Also remove from forum, FAQ, and Resources if you prefer no divider after them */
+#faq.content-section::after,
+#resources.content-section::after,
+#therapy.content-section::after,
+#team.content-section::after,
+#about.content-section::after,
+#home.content-section::after {
+  content: none;
+}
+
+/* Subtle Section Background Gradients (Example for About Us and Team) */
+#about.content-section,
+#team.content-section {
+  background: linear-gradient(
+    to bottom,
+    #fff,
+    #f8f0e3
+  ); /* Example subtle gradient */
+}
+
+#faq.content-section,
+#resources.content-section,
+#therapy.content-section,
+#forum.content-section,
+#booking.content-section,
+#contact.content-section {
+  background-color: #fff; /* Keep other sections on solid white for contrast */
+}
+
+/* Decorative Puppy Paw Icons (Example style - adjust as needed) */
+.section-heading-icon {
+  margin-right: 10px;
+  color: #fceabb; /* Yellow paw icon color */
+  font-size: 1.2em; /* Adjust size */
+  vertical-align: middle; /* Align with heading text */
+}

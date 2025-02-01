@@ -3,87 +3,679 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animal-Inspired Support for Body Dysmorphia - Home</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Pawsitive Pathways - Dog Therapy for Body Dysmorphia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Nunito and Poppins -->
   </head>
   <body>
     <header>
       <nav>
+        <div class="logo">
+          <img
+            src="./assets/images/v987-11a.jpg"
+            alt="Pawsitive Pathways Logo"
+          />
+          <h1>Pawsitive Pathways</h1>
+        </div>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="what-is-bdd.html">What is BDD?</a></li>
-          <li><a href="animal-therapy.html">Animal Therapy</a></li>
-          <li><a href="virtual-animals.html">Virtual Animals</a></li>
-          <li><a href="virtual-activities.html">Virtual Activities</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="booking.html">Book a Session</a>
-            <!-- ADDED BOOKING LINK HERE -->
-          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#therapy">Our Therapy</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#booking">Book a Session</a></li>
+          <li><a href="#forum">Forum</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="hero">
-        <h1>Welcome to Animal-Inspired Support</h1>
-        <p>
-          Discover a gentle path towards self-acceptance and well-being,
-          inspired by the unconditional love of animals. We offer resources and
-          virtual experiences designed to support individuals with body
-          dysmorphia.
-        </p>
-        <a href="virtual-animals.html" class="button"
-          >Meet Our Virtual Animals</a
-        >
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Find Comfort and Confidence with Puppy Love</h1>
+          <p>
+            Dog therapy designed to help you rediscover self-love and body
+            positivity.
+          </p>
+          <a href="#booking" class="button primary-button"
+            >Book a Session Today</a
+          >
+          <a href="#contact" class="button secondary-button"
+            >Book a Free Consultation</a
+          >
+        </div>
+        <div class="hero-image">
+          <div class="image-carousel">
+            <div class="carousel-slide fade">
+              <img
+                src="./assets/images/pexels-goochie-poochie-3299905.jpg"
+                alt="Cute Puppy 1"
+              />
+            </div>
+            <div class="carousel-slide fade">
+              <img
+                src="./assets/images/pexels-wildlittlethingsphoto-2253275.jpg"
+                alt="Cute Puppy 2"
+              />
+            </div>
+            <div class="carousel-slide fade">
+              <img
+                src="./assets/images/pexels-gilberto-reyes-259461-825949.jpg"
+                alt="Cute Puppy 3"
+              />
+            </div>
+            <a class="carousel-prev" onclick="plusSlides(-1)">❮</a>
+            <a class="carousel-next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
       </section>
 
-      <section id="about-us">
-        <h2>About Our Approach</h2>
-        <p>
-          We believe in the power of animal therapy principles to offer comfort
-          and a shift in perspective. Our website provides information and
-          simulated experiences to explore these benefits.
-        </p>
-        <p>
-          Learn more about
-          <a href="animal-therapy.html">Animal Therapy for Body Dysmorphia</a>.
-        </p>
-      </section>
+      <section id="about" class="content-section">
+        <h2><i class="fas fa-paw section-heading-icon"></i> About Us</h2>
+        <!-- Paw Icon Added -->
+        <div class="section-content">
+          <div class="image-container">
+            <img
+              src="./assets/images/pexels-jenny-uhling-2262740-17807527.jpg"
+              alt="Dog and Therapist"
+            />
+          </div>
+          <div class="text-container">
+            <p>
+              Welcome to Pawsitive Pathways! We believe in the incredible power
+              of animal-assisted therapy, especially the unconditional love and
+              joy that dogs bring. Our team of trained therapists and adorable
+              therapy dogs are dedicated to supporting individuals struggling
+              with body dysmorphia.
+            </p>
 
-      <section id="featured-activities">
-        <h2>Explore Virtual Activities</h2>
-        <p>
-          Engage in calming and grounding virtual activities inspired by animal
-          interactions.
-        </p>
-        <ul>
-          <li>
-            <a href="virtual-activities.html#meditations">Guided Meditations</a>
-          </li>
-          <li>
-            <a href="virtual-activities.html#stories">Interactive Stories</a>
-          </li>
-          <li>
-            <a href="virtual-activities.html#sounds-images"
-              >Calming Sounds & Images</a
+            <h3>Why Dog Therapy for Body Dysmorphia?</h3>
+            <p>
+              Dog therapy offers unique benefits for individuals dealing with
+              body dysmorphia:
+            </p>
+            <ul>
+              <li>
+                <strong>Unconditional Positive Regard:</strong> Dogs offer
+                non-judgmental acceptance...
+              </li>
+              <li>
+                <strong>Reduced Self-Consciousness:</strong> Interacting with
+                dogs shifts focus...
+              </li>
+              <li>
+                <strong>Sensory Comfort:</strong> Petting and cuddling dogs
+                releases endorphins...
+              </li>
+              <li>
+                <strong>Emotional Regulation:</strong> Dogs can intuitively
+                sense emotions...
+              </li>
+            </ul>
+
+            <div class="expandable-content" id="about-expandable">
+              <p>
+                We provide a safe, supportive, and uplifting environment where
+                you can connect with our gentle dogs, explore your feelings, and
+                build a healthier relationship with your body image. Our
+                approach is compassionate, evidence-based, and always
+                puppy-powered!
+              </p>
+            </div>
+            <button
+              class="button secondary-button read-more-button"
+              data-target="about-expandable"
             >
-          </li>
-        </ul>
+              Read More...
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="content-section">
+        <h2><i class="fas fa-paw section-heading-icon"></i> Meet Our Team</h2>
+        <!-- Paw Icon Added -->
+        <div class="team-grid">
+          <div class="team-member">
+            <img
+              src="./assets/images/istockphoto-531292293-1024x1024.jpg"
+              alt="Therapist 1"
+            />
+            <h3>Dr. Lim Mei Ling, PhD</h3>
+            <p class="team-title">Licensed Clinical Psychologist</p>
+            <p class="team-bio">
+              Dr. Lim specialises in body image concerns and anxiety, with a
+              deep belief in the healing power of animal-assisted therapy within
+              our Singaporean community.
+            </p>
+          </div>
+          <div class="team-member">
+            <img
+              src="./assets/images/istockphoto-177373093-1024x1024.jpg"
+              alt="Therapist 2"
+            />
+            <h3>Ravi s/o Kumar, MSW, RSW</h3>
+            <p class="team-title">Registered Social Worker</p>
+            <p class="team-bio">
+              Ravi is passionate about creating a safe and inclusive space for
+              therapy, embracing the unique cultural backgrounds of individuals
+              in Singapore.
+            </p>
+          </div>
+          <div class="team-member">
+            <img
+              src="./assets/images/istockphoto-1298800629-1024x1024.jpg"
+              alt="Therapist 3"
+            />
+            <h3>Nurul bte Abdul, MA, LPC</h3>
+            <p class="team-title">Licensed Professional Counselor</p>
+            <p class="team-bio">
+              With a warm and empathetic approach, Nurul is dedicated to
+              supporting mental well-being through client-centred therapy and
+              the joy of animal interaction.
+            </p>
+          </div>
+          <!-- Add more team members as needed -->
+        </div>
+      </section>
+
+      <!-- **"Meet Our Therapy Dogs" Section Added Here** -->
+      <section id="therapy-dogs" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Meet Our Therapy Dogs
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="dog-grid">
+          <div class="dog-member">
+            <img src="images/dog-buddy.jpg" alt="Buddy - Golden Retriever" />
+            <h3>Buddy</h3>
+            <p class="dog-breed">Golden Retriever</p>
+            <p class="dog-bio">
+              Buddy is a gentle soul with a heart of gold. He loves cuddles and
+              is excellent at providing comfort and calm during sessions.
+            </p>
+          </div>
+          <div class="dog-member">
+            <img src="images/dog-luna.jpg" alt="Luna - Labrador" />
+            <h3>Luna</h3>
+            <p class="dog-breed">Labrador</p>
+            <p class="dog-bio">
+              Luna is playful and energetic, bringing joy and a sense of fun to
+              therapy. She's great at encouraging interaction and reducing
+              anxiety.
+            </p>
+          </div>
+          <div class="dog-member">
+            <img
+              src="images/dog-charlie.jpg"
+              alt="Charlie - Cavalier King Charles Spaniel"
+            />
+            <h3>Charlie</h3>
+            <p class="dog-breed">Cavalier King Charles Spaniel</p>
+            <p class="dog-bio">
+              Charlie is a sweet and sensitive companion, offering a comforting
+              presence and gentle support. He's wonderful for one-on-one
+              interactions.
+            </p>
+          </div>
+          <!-- Add more therapy dogs as needed -->
+        </div>
+      </section>
+
+      <section id="therapy" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Our Therapy Sessions
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="section-content">
+          <div class="text-container">
+            <p>
+              Our therapy sessions are designed to be a warm and comforting
+              experience. You'll spend time interacting with our specially
+              trained therapy dogs in a calming and private setting. Studies
+              show that interacting with animals can reduce stress, release
+              endorphins, and improve mood. Our sessions incorporate these
+              benefits to help you:
+            </p>
+            <ul>
+              <li>Reduce anxiety and stress related to body image.</li>
+              <li>Improve self-esteem and body confidence.</li>
+              <li>Develop healthier coping mechanisms.</li>
+              <li>
+                Experience unconditional positive regard from our furry
+                therapists.
+              </li>
+            </ul>
+
+            <div class="expandable-content" id="therapy-expandable">
+              <p>
+                Each session is tailored to your individual needs and goals. We
+                combine talk therapy techniques with dog interaction to create a
+                holistic and effective approach.
+              </p>
+              <blockquote class="testimonial">
+                <p>
+                  "Spending time with the dogs during therapy has been truly
+                  transformative. I feel so much more at peace with myself." -
+                  <cite>Anonymous Client</cite>
+                </p>
+              </blockquote>
+            </div>
+            <button
+              class="button secondary-button read-more-button"
+              data-target="therapy-expandable"
+            >
+              Read More...
+            </button>
+          </div>
+          <div class="image-container">
+            <img
+              src="./assets/images/pexels-rdne-7516817.jpg"
+              alt="Therapy Session with Dog"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Resources & Support
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="resources-grid">
+          <div class="resource-item">
+            <i class="fas fa-book fa-3x"></i>
+            <h3>Recommended Reading</h3>
+            <p>
+              Explore books that offer insights into body image,
+              self-compassion, and overcoming body dysmorphia.
+            </p>
+            <ul class="resource-list">
+              <li>
+                <a href="#" class="resource-link"
+                  >The Body Is Not an Apology: The Power of Radical Self-Love</a
+                >
+                <p class="resource-description">
+                  Learn to embrace body positivity and challenge societal norms
+                  with Sonya Renee Taylor's powerful guide.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >Health at Every Size: The Surprising Truth About Your
+                  Weight</a
+                >
+                <p class="resource-description">
+                  Discover a weight-inclusive approach to health and well-being,
+                  focusing on body respect and mindful eating.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >Self-Compassion: The Proven Power of Being Kind to
+                  Yourself</a
+                >
+                <p class="resource-description">
+                  Cultivate self-kindness and reduce self-criticism with Kristin
+                  Neff's compassionate and practical advice.
+                </p>
+              </li>
+            </ul>
+            <a href="#" class="button secondary-button">View More Books</a>
+          </div>
+          <div class="resource-item">
+            <i class="fas fa-file-alt fa-3x"></i>
+            <h3>Helpful Articles</h3>
+            <p>
+              Access articles and blog posts with tips, advice, and information
+              on body positivity and mental well-being.
+            </p>
+            <ul class="resource-list">
+              <li>
+                <a href="#" class="resource-link"
+                  >5 Ways Dog Therapy Can Improve Mental Health</a
+                >
+                <p class="resource-description">
+                  Understand the science-backed benefits of interacting with
+                  dogs for stress reduction and emotional support.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >Body Image and Social Media: Navigating the Digital World</a
+                >
+                <p class="resource-description">
+                  Explore the impact of social media on body image and
+                  strategies for building a healthier online experience.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >The Link Between Body Dysmorphia and Anxiety</a
+                >
+                <p class="resource-description">
+                  Learn about the connection between body dysmorphia and anxiety
+                  disorders, and find pathways to support.
+                </p>
+              </li>
+            </ul>
+            <a href="#" class="button secondary-button">Read More Articles</a>
+          </div>
+          <div class="resource-item">
+            <i class="fas fa-users fa-3x"></i>
+            <h3>Support Groups</h3>
+            <p>
+              Find links to support groups and communities where you can connect
+              with others on a similar journey.
+            </p>
+            <ul class="resource-list">
+              <li>
+                <a href="#" class="resource-link"
+                  >Online Body Image Support Forum</a
+                >
+                <p class="resource-description">
+                  Connect with a supportive online community to share
+                  experiences and find encouragement on your journey.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >Local Body Dysmorphia Support Group - Happyville</a
+                >
+                <p class="resource-description">
+                  Join a local in-person support group in Happyville for
+                  face-to-face connection and understanding.
+                </p>
+              </li>
+              <li>
+                <a href="#" class="resource-link"
+                  >National Body Dysmorphic Disorder Foundation</a
+                >
+                <p class="resource-description">
+                  Access resources and support from a national organization
+                  dedicated to body dysmorphic disorder awareness and
+                  assistance.
+                </p>
+              </li>
+            </ul>
+            <a href="#" class="button secondary-button"
+              >Find More Support Groups</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Frequently Asked
+          Questions
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>What is Body Dysmorphia?</h3>
+            <p>
+              Body dysmorphia is a mental health condition where a person spends
+              a lot of time worrying about flaws in their appearance. These
+              flaws are often unnoticeable to others.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How Does Dog Therapy Work?</h3>
+            <p>
+              Dog therapy, or animal-assisted therapy, uses the human-animal
+              bond to provide comfort, reduce anxiety, and promote emotional
+              well-being. Interacting with dogs can release endorphins and
+              create a calming therapeutic environment.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What Happens in a Therapy Session?</h3>
+            <p>
+              Sessions typically involve spending time interacting with our
+              trained therapy dogs in a comfortable setting. Therapists guide
+              sessions to help you explore your feelings and develop coping
+              strategies, alongside the therapeutic presence of the dogs.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Are Your Therapists Qualified?</h3>
+            <p>
+              Yes, all our therapists are licensed and experienced mental health
+              professionals with specialized training in animal-assisted
+              therapy. <a href="#team">Meet our team here.</a>
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What are Your Fees?</h3>
+            <p>
+              Please contact us to inquire about our session fees and any
+              available payment options. We are committed to making therapy
+              accessible.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Is This Covered by Insurance?</h3>
+            <p>
+              Insurance coverage for animal-assisted therapy varies. We
+              recommend checking with your insurance provider to understand your
+              coverage options.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Book Your Session
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="booking-form">
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred Date:</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="message"
+                >Anything you'd like to share (optional):</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+            <button type="submit" class="button primary-button">
+              Book Now
+            </button>
+            <div
+              id="bookingSuccess"
+              class="success-message"
+              style="display: none"
+            >
+              <p>
+                Booking request submitted successfully! We'll be in touch soon
+                to confirm your session.
+              </p>
+            </div>
+          </form>
+          <blockquote class="testimonial puppy-quote">
+            <p>
+              "Woof woof! (That's dog for 'We can't wait to meet you and help
+              you feel better!')." - <cite>Buddy, Therapy Dog</cite>
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="forum" class="content-section">
+        <h2>
+          <i class="fas fa-paw section-heading-icon"></i> Anonymous Forum
+          (Simulated Interactive)
+        </h2>
+        <!-- Paw Icon Added -->
+        <div class="forum">
+          <div id="forumPosts">
+            <!-- Example Forum Posts - Simulated -->
+            <div class="forum-post">
+              <p class="post-author">Anonymous User</p>
+              <p class="post-content">
+                Just had my first session and feeling so much lighter already!
+                The dogs are amazing and so comforting. Thank you Pawsitive
+                Pathways!
+              </p>
+            </div>
+            <div class="forum-post">
+              <p class="post-author">Anonymous User</p>
+              <p class="post-content">
+                Is anyone else struggling today? Sending everyone positive puppy
+                vibes and strength! We got this! ❤️
+              </p>
+            </div>
+            <!-- More simulated posts could go here -->
+          </div>
+
+          <div class="new-post-form">
+            <h3>Share Your Thoughts Anonymously</h3>
+            <form id="newPostForm">
+              <div class="form-group">
+                <textarea
+                  id="postText"
+                  name="postText"
+                  rows="4"
+                  placeholder="Type your message here..."
+                ></textarea>
+              </div>
+              <button type="submit" class="button primary-button">
+                Post Message
+              </button>
+            </form>
+          </div>
+
+          <div class="forum-placeholder" style="display: none">
+            <!-- Hide placeholder now that it's interactive -->
+            <p>
+              Forum functionality will be implemented in the full version. This
+              is a simulated preview.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2><i class="fas fa-paw section-heading-icon"></i> Contact Us</h2>
+        <!-- Paw Icon Added -->
+        <div class="contact-form-section">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="contactName">Your Name:</label>
+              <input
+                type="text"
+                id="contactName"
+                name="contactName"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email:</label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="contactEmail"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message:</label>
+              <textarea
+                id="contactMessage"
+                name="contactMessage"
+                rows="5"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="button primary-button">
+              Send Message
+            </button>
+            <div
+              id="contactSuccess"
+              class="success-message"
+              style="display: none"
+            >
+              <p>Message sent successfully! We'll get back to you soon.</p>
+            </div>
+          </form>
+          <p
+            class="contact-info-fallback"
+            style="margin-top: 20px; text-align: center"
+          >
+            Or reach us directly at:<br />
+            <i class="fas fa-map-marker-alt"></i> 123 Puppy Lane, Happyville, CA
+            90001<br />
+            <i class="fas fa-phone"></i> 555-PAWS-LOVE (555-7297-5683)<br />
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@pawsitivepathways.com"
+              >info@pawsitivepathways.com</a
+            >
+          </p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2023 Your Team Name. All rights reserved.</p>
-      <nav>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
-      </nav>
+      <p>
+        © 2023 Pawsitive Pathways. All rights reserved.
+        <i class="fas fa-paw footer-paw-icon"></i>
+        <!-- Paw Icon in Footer -->
+        <a href="#">Privacy Policy</a>
+        <i class="fas fa-paw footer-paw-icon"></i>
+        <!-- Paw Icon in Footer -->
+        | <a href="#">Terms of Service</a>
+        <i class="fas fa-paw footer-paw-icon"></i>
+        <!-- Paw Icon in Footer -->
+      </p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
