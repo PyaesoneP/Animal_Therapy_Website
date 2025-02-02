@@ -232,3 +232,68 @@ window.addEventListener("resize", () => {
     closeMenu();
   }
 });
+
+// Loading Screen
+window.addEventListener("load", () => {
+  document.querySelector(".loader").style.opacity = "0";
+  setTimeout(() => {
+    document.querySelector(".loader").remove();
+  }, 500);
+});
+
+// Virtual Pet
+let hunger = 100;
+const petElement = document.querySelector(".pet");
+const hungerFill = document.querySelector(".hunger-fill");
+
+function updateHunger() {
+  hunger = Math.max(0, hunger - 1);
+  hungerFill.style.width = `${hunger}%`;
+
+  if (hunger < 20) {
+    petElement.style.animation = "shake 0.5s ease-in-out infinite";
+  } else {
+    petElement.style.animation = "float 3s ease-in-out infinite";
+  }
+}
+
+petElement.addEventListener("click", () => {
+  hunger = Math.min(100, hunger + 20);
+  hungerFill.style.width = `${hunger}%`;
+});
+
+setInterval(updateHunger, 3000);
+
+// Mood Picker
+document.querySelectorAll(".mood-option").forEach((button) => {
+  button.addEventListener("click", () => {
+    const mood = button.classList[1];
+    document.body.setAttribute("data-mood", mood);
+  });
+});
+
+// Affirmation Generator
+const affirmations = [
+  "You're worthy of love and care",
+  "Your strength is greater than any challenge",
+  "Every step forward is progress",
+  "You're surrounded by puppy love",
+  "Your courage inspires others",
+];
+
+document.getElementById("generateAffirmation").addEventListener("click", () => {
+  const text = document.querySelector(".affirmation-text");
+  text.textContent =
+    affirmations[Math.floor(Math.random() * affirmations.length)];
+  text.style.animation = "fadeIn 0.5s";
+  setTimeout(() => (text.style.animation = ""), 500);
+});
+
+// Breathing Widget Animation
+const breathingCircle = document.querySelector(".circle");
+let breathing = true;
+
+breathingCircle.addEventListener("click", () => {
+  breathing = !breathing;
+  breathingCircle.style.animationPlayState = breathing ? "running" : "paused";
+});

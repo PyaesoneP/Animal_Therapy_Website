@@ -21,8 +21,67 @@
     />
     <!-- Google Fonts: Nunito and Poppins -->
     <meta name="theme-color" content="#FFB6C1" />
+
+    <style>
+      /* Add temporary inline CSS for critical animations */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-5px);
+        }
+        75% {
+          transform: translateX(5px);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div class="loader">
+      <div class="paw-track">
+        <span class="paw">🐾</span>
+      </div>
+    </div>
+
+    <!-- Virtual Pet -->
+    <div class="virtual-pet">
+      <div class="pet">🐶</div>
+      <div class="hunger-meter"><div class="hunger-fill"></div></div>
+    </div>
+
+    <!-- Mood Picker -->
+    <div class="mood-picker">
+      <button class="mood-option calm"></button>
+      <button class="mood-option joyful"></button>
+      <button class="mood-option loved"></button>
+    </div>
     <header>
       <nav>
         <div class="logo">
@@ -430,6 +489,19 @@
             >
           </div>
         </div>
+
+        <!-- Update resources section -->
+        <div class="affirmation-generator">
+          <button class="button primary-button" id="generateAffirmation">
+            Get Puppy Power 🐾
+          </button>
+          <p class="affirmation-text"></p>
+        </div>
+        <!-- Add new sections -->
+        <section class="breathing-widget">
+          <div class="circle"></div>
+          <p class="instruction">Breathe with Buddy</p>
+        </section>
       </section>
 
       <section id="faq" class="content-section">
@@ -687,7 +759,6 @@
         <!-- Paw Icon in Footer -->
       </p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
