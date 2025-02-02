@@ -1,5 +1,272 @@
-/* style.css */
+/* Enhanced Cute Theme Styles */
+:root {
+  --primary: #ffb6c1; /* Soft pink */
+  --secondary: #a8dadc; /* Light teal */
+  --accent: #ffd700; /* Golden yellow */
+  --text: #594a4e; /* Warm brown */
+}
 
+/* Animated Floating Paws Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23ffb6c180" d="M12 2C14.5 2 15 4.5 15 5c0 1.5-1 2-1.5 3.5C13 10 12 10 12 11s1 1 1 2.5S12 16 12 16s-1-1.5-1-3 1-2 1-3.5-1.5-2-1.5-3.5C10.5 4.5 11 2 12 2z"/></svg>');
+  opacity: 0.1;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-100px) translateX(100px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Enhanced Button Styles */
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:after {
+  content: "🐾";
+  position: absolute;
+  right: -20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover:after {
+  right: 15px;
+}
+
+/* Modern Gradient Headings */
+h1,
+h2,
+h3 {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Paw Print List Bullets */
+ul:not(.resource-list) li {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+ul:not(.resource-list) li::before {
+  content: "🐾";
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+}
+
+/* Animated Dog Cards */
+.dog-member,
+.team-member {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.dog-member:hover,
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern Gradient Borders */
+.content-section {
+  position: relative;
+  border: 3px solid;
+  border-image: linear-gradient(45deg, var(--primary), var(--secondary)) 1;
+  margin: 2rem auto;
+}
+
+/* Animated Paw Cursor */
+@media (hover: hover) {
+  body {
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23FFB6C1" d="M12 2C14.5 2 15 4.5 15 5c0 1.5-1 2-1.5 3.5C13 10 12 10 12 11s1 1 1 2.5S12 16 12 16s-1-1.5-1-3 1-2 1-3.5-1.5-2-1.5-3.5C10.5 4.5 11 2 12 2z"/></svg>'),
+      auto;
+  }
+}
+
+/* Enhanced Carousel */
+.image-carousel {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  transition: opacity 1s ease-in-out;
+}
+
+/* Modern Form Styles */
+.form-group input,
+.form-group textarea {
+  border: 2px solid var(--secondary) !important;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 8px rgba(168, 218, 220, 0.3);
+}
+
+/* Animated Paw Divider */
+.content-section::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 30px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23FFB6C1" d="M12 2C14.5 2 15 4.5 15 5c0 1.5-1 2-1.5 3.5C13 10 12 10 12 11s1 1 1 2.5S12 16 12 16s-1-1.5-1-3 1-2 1-3.5-1.5-2-1.5-3.5C10.5 4.5 11 2 12 2z"/></svg>');
+  margin: 2rem auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Navigation Styles */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--text);
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.hamburger-inner::before {
+  top: -8px;
+}
+
+.hamburger-inner::after {
+  top: 8px;
+}
+
+/* Active state for hamburger */
+.hamburger.active .hamburger-inner {
+  transform: rotate(45deg);
+}
+
+.hamburger.active .hamburger-inner::before {
+  transform: rotate(-90deg) translateX(-8px);
+  opacity: 1;
+}
+
+.hamburger.active .hamburger-inner::after {
+  opacity: 0;
+}
+
+.nav-menu {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: white;
+    flex-direction: column;
+    padding: 100px 20px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .nav-menu li a {
+    padding: 15px;
+    border-radius: 8px;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .nav-menu li a:hover {
+    background-color: #f8f0e3;
+  }
+}
+
+/* Add overlay for mobile menu */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  display: none;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+}
 /* General Styles */
 body {
   /* Option 2: Simple CSS repeating pattern (more abstract, less resource intensive) - ADJUSTED for SUBTLETY */
