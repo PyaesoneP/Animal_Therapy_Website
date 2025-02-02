@@ -156,3 +156,79 @@ document.querySelectorAll(".read-more-button").forEach((button) => {
     }
   });
 });
+
+// Add subtle animation to dog cards
+document.querySelectorAll(".dog-member, .team-member").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.transform = `perspective(1000px) rotateX(${
+      (y - rect.height / 2) / 10
+    }deg) rotateY(${-(x - rect.width / 2) / 10}deg)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)";
+  });
+});
+
+// Add confetti effect on booking
+function createConfetti() {
+  const confetti = document.createElement("div");
+  confetti.innerHTML = "🎉🐾";
+  confetti.style.position = "fixed";
+  confetti.style.fontSize = "24px";
+  confetti.style.left = Math.random() * window.innerWidth + "px";
+  confetti.style.animation = "fall 3s linear";
+  document.body.appendChild(confetti);
+
+  setTimeout(() => confetti.remove(), 3000);
+}
+
+document.querySelectorAll(".button").forEach((button) => {
+  button.addEventListener("click", () => {
+    for (let i = 0; i < 10; i++) setTimeout(createConfetti, i * 100);
+  });
+});
+
+// Add CSS animation for confetti
+const style = document.createElement("style");
+style.textContent = `@keyframes fall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}`;
+document.head.appendChild(style);
+
+// Mobile Navigation Toggle
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const mobileOverlay = document.createElement("div");
+
+mobileOverlay.className = "mobile-menu-overlay";
+document.body.appendChild(mobileOverlay);
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  mobileOverlay.classList.toggle("active");
+});
+
+// Close menu when clicking outside or on a link
+mobileOverlay.addEventListener("click", closeMenu);
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  mobileOverlay.classList.remove("active");
+}
+
+// Close menu on window resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    closeMenu();
+  }
+});

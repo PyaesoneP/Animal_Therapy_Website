@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <!-- Google Fonts: Nunito and Poppins -->
+    <meta name="theme-color" content="#FFB6C1" />
   </head>
   <body>
     <header>
@@ -31,7 +32,14 @@
           />
           <h1>Pawsitive Pathways</h1>
         </div>
-        <ul>
+        <!-- Add hamburger button -->
+        <button class="hamburger" aria-label="Menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <!-- Add nav-menu class to ul -->
+        <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#therapy">Our Therapy</a></li>
@@ -52,12 +60,10 @@
             Dog therapy designed to help you rediscover self-love and body
             positivity.
           </p>
-          <a href="#booking" class="button primary-button"
-            >Book a Session Today</a
-          >
-          <a href="#contact" class="button secondary-button"
-            >Book a Free Consultation</a
-          >
+          <a href="#booking" class="button primary-button"> Book Session 🐶 </a>
+          <a href="#contact" class="button secondary-button">
+            Free Consultation 🐾
+          </a>
         </div>
         <div class="hero-image">
           <div class="image-carousel">
